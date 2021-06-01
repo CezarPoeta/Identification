@@ -1,5 +1,6 @@
 from django.db import models
 
+# from django.contrib.auth.models import AbstractBaseUser
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 
 class UsuarioManager(BaseUserManager):
@@ -14,12 +15,12 @@ class UsuarioManager(BaseUserManager):
         user.save(using=self._db)
         return user
 
-    def create_user(self, email, password=None, **extra_fields):
-       # extra_fields.setdefault('is_staff', True) O normal é assim
+    def create_user(self, email, password='Nome', **extra_fields):
+       # extra_fields.setdefault('is_staff', True)
         extra_fields.setdefault('is_superuser', False)
         return self._create_user(email, password, **extra_fields)
 
-    def create_superuser(self, email, password=None, **extra_fields):
+    def create_superuser(self, email, password='Nome', **extra_fields):
         extra_fields.setdefault('is_superuser', True)
         extra_fields.setdefault('is_staff', True)
 

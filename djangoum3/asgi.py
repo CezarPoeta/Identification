@@ -1,5 +1,5 @@
 """
-ASGI config for identification project.
+ASGI config for djangoum3 project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'identification.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'djangoum3.settings')
 
 application = get_asgi_application()
