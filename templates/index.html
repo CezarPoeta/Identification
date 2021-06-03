@@ -3,7 +3,6 @@
 {% block content %}
     <div>
         <h1>Personal Financial Control</h1>
-        {% include 'navigation.html' %}
 
         {% if user.is_anonymous %}
             <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
