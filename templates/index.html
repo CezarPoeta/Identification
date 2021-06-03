@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-{% block content %}
-    <div class="container">
-        <h1>Personal Financial Control</h1>
 
+{% block content %}
+    <div>
+        <h1>Personal Financial Control</h1>
+        {% include 'navigation.html' %}
 
         {% if user.is_anonymous %}
             <a class="btn btn-primary" href="{% url 'login' %}">Login</a>
 
         {% else %}
             <a class="btn btn-primary" href="{% url 'logout' %}">Logout</a>
-            {% include 'navigation.html' %}
         {% endif %}
 
     </div>
