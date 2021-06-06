@@ -1,5 +1,16 @@
-{% extends 'base.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/sign-in/signin.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        id="bootstrap-css">
+
+</head>
+<body>
     <form class="form-signin" method="post" autocomplete="off">
         {% csrf_token %}
         <img class="mb-4" src="https://image.freepik.com/vettori-gratuito/pagamento-online-icon-set-design_24640-45109.jpg" alt="" width="72" height="72">
@@ -11,4 +22,5 @@
         <button class="btn brn-lg btn-primary btn-block" type="submit">Acessar</button>
         <p class="mt-5 mb-3 text-muted">&copy; {% now 'Y' %} </p>
     </form>
-{% endblock %}
+</body>
+</html>
